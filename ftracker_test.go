@@ -38,8 +38,8 @@ func Test_distance(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := distance(tt.args.action); got != tt.want {
-				t.Errorf("distance() = %v, want %v", got, tt.want)
+			if got := Distance(tt.args.action); got != tt.want {
+				t.Errorf("Distance() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -75,8 +75,8 @@ func Test_meanSpeed(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := meanSpeed(tt.args.action, tt.args.duration); got != tt.want {
-				t.Errorf("meanSpeed() = %v, want %v", got, tt.want)
+			if got := MeanSpeed(tt.args.action, tt.args.duration); got != tt.want {
+				t.Errorf("MeanSpeed() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -165,8 +165,8 @@ func TestShowTrainingInfo(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := ShowTrainingInfo(tt.args.action, tt.args.trainingType, tt.args.duration, tt.args.weight, tt.args.height, tt.args.lengthPool, tt.args.countPool); got != tt.want {
-				t.Errorf("ShowTrainingInfo() = %v, want %v", got, tt.want)
+			if got := ShowTrainInfo(tt.args.action, tt.args.trainingType, tt.args.duration, tt.args.weight, tt.args.height, tt.args.lengthPool, tt.args.countPool); got != tt.want {
+				t.Errorf("ShowTrainInfo() = %v, want %v", got, tt.want)
 			}
 		})
 	}
